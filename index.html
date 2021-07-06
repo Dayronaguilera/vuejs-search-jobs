@@ -16,12 +16,52 @@
 
 </head>
 <body>
+    <!-- 
+        Milestone 1
+        Mostriamo tutti gli annunci in una lista, con una grafica molto elementare.
+
+        Milestone 2
+        Identificare il preferito
+        Identifichiamo nella lista gli annunci di lavoro preferiti, 
+        con un simbolo che si attiva/colora solo se quell’annuncio è tra i preferiti (per esempio, una stella).
+        Aggiungere ai preferiti
+        Inoltre potremo aggiungere il singolo annuncio alla lista di preferiti, 
+        inserendo un altro elemento nell’html su cui fare click o sfruttando quello attuale (il simbolo del primo step, la stella), 
+        che permette al click l’aggiunta dinamica dell’annuncio alla lista dei preferiti. 
+
+
+        Nota bene: La lista starred conterrà solo l’id dell’elemento, 
+        tramite il quale potremmo identificare quali annunci sono preferiti e quali no.
+     -->
 
     <!-- collegamento con vue.js -->
     <div id="app">
-
-
-
+        <div class="container">
+            <div v-for = 'job in jobs'>
+                <div class="row">
+                    <ul class="col-6 cont-text">
+                        <li>
+                            {{job.company}}
+                        </li>
+                        <li>
+                            {{job.position}}
+                        </li>
+                        <li>
+                            {{job.description}}
+                        </li>
+                        <li>
+                            {{job.created_at}}
+                        </li>
+                        <li>
+                            {{job.city}}
+                        </li>
+                        <li>
+                            {{job.contract}}
+                        </li>
+                    </ul>  
+                </div>
+            </div>
+        </div>
     </div>
     
     <!-- link javascript -->

@@ -1,0 +1,8 @@
+.cont-text{
+    border: 1px black solid;
+    border-radius: 5px;
+    
+}
+.cont-text li{
+    list-style: none;
+}
