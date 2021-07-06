@@ -47,16 +47,16 @@ new Vue(
                 },  
     
             ],
-            starred: [1, 2],
+            starred: [],
             applied: [4, 5]    
         },
         methods:{
-            like: function (array, id) {
-                array.push(id)
+            like: function (starred, id) {
+                starred.push(id);
             },
-            notLike: function (array, id) {
-                let index = array.indexOf(id)
-                array.splice(index, 1)
+            notLike: function (starred, id) {
+                let index = starred.indexOf(id)
+                starred.splice(index, 1)
             },
         }
     }

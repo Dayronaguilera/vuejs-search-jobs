@@ -1,6 +1,6 @@
 
 .cont-text{
-    border: 1px black solid;
+    border: 1px rgb(179, 179, 179) solid;
     border-radius: 10px;
     position: relative;
     padding: 10px 0;
@@ -14,6 +14,7 @@
     top: 15px;
     right: 40px;
     font-size: 25px;
+    color: rgb(192, 9, 9);
 }
 
 .cont-text li:nth-child(2) h4{
@@ -24,8 +25,13 @@
 .cont-text li:nth-child(2) span{
     font-weight: bold;
 }
-.cont-text li:last-child{
+.cont-text li:nth-child(4){
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
+}
+.cont-text li:last-child{
+    display: flex;
+    justify-content: center;
+}
 }

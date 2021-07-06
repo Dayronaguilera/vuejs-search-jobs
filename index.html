@@ -17,16 +17,12 @@
 </head>
 <body>
     <!-- 
-        
-
-        Milestone 2
-        Identificare il preferito
-        Identifichiamo nella lista gli annunci di lavoro preferiti, 
-        con un simbolo che si attiva/colora solo se quell’annuncio è tra i preferiti (per esempio, una stella).
-        Aggiungere ai preferiti
-        Inoltre potremo aggiungere il singolo annuncio alla lista di preferiti, 
-        inserendo un altro elemento nell’html su cui fare click o sfruttando quello attuale (il simbolo del primo step, la stella), 
-        che permette al click l’aggiunta dinamica dell’annuncio alla lista dei preferiti. 
+        Milestone 3
+        Potremo anche inviare la nostra candidatura premendo sul pulsante APPLY.
+        Gli annunci a cui abbiamo mandato una candidatura non mostreranno il pulsante APPLY 
+        e si distingueranno dalle altre per colore e Badge ‘applied’.
+        Un annuncio a cui abbiamo inviato la candidatura automaticamente viene eliminato dalla lista starred.
+        Anche in questo caso inseriremo l’id nell’array applied. (come prima abbiamo fatto per lo starred)
 
 
         Nota bene: La lista starred conterrà solo l’id dell’elemento, 
@@ -60,6 +56,9 @@
                         <li>
                             <span>{{job.city}},</span>
                             <span>{{job.created_at}}</span>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-outline-success">APPLY</button>
                         </li>
                     </ul>  
                 </div>
