@@ -1,13 +1,16 @@
 
 .cont-text{
-    border: 1px rgb(179, 179, 179) solid;
+    border: 1px rgb(212, 19, 19) solid;
     border-radius: 10px;
     position: relative;
     padding: 10px 0;
+    background-color: rgba(160, 173, 158, 0.1);
 }
 .cont-text li{
     list-style: none;
-    padding: 5px 10px
+    padding: 5px 10px;
+   
+    
 }
 .cont-text li i{
     position: absolute;
@@ -15,23 +18,49 @@
     right: 40px;
     font-size: 25px;
     color: rgb(192, 9, 9);
+    cursor: pointer;
 }
 
-.cont-text li:nth-child(2) h4{
+.cont-text li:nth-child(2) h5{
     text-decoration: underline;
     display: inline;
     margin-right: 5px;
+    color: rgb(159, 246, 45);
 }
 .cont-text li:nth-child(2) span{
     font-weight: bold;
+    color: rgb(32, 240, 205);
 }
 .cont-text li:nth-child(4){
     display: flex;
     justify-content: flex-end;
     margin-right: 30px;
 }
-.cont-text li:last-child{
+
+.cont-text .buttonApply{
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
+
+/* modale */
+.newsletter-modal {
+    display: none;
+    position: fixed;
+    top: 200px;
+    border: 2px #333 solid;
+    border-radius: 15px;
+    padding: 32px;
+    background-color: rgb(94, 194, 224);
+    color: rgb(39, 54, 187);
+    z-index: 1001;
+    margin-left: 15px;
+}
+
+.newsletter-modal .close {
+    position: absolute;
+    right: 45px;
+    top: 40px;
+    cursor: pointer;
+    font-size: 25px;
 }

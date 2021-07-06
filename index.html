@@ -16,19 +16,7 @@
 
 </head>
 <body>
-    <!-- 
-        Milestone 3
-        Potremo anche inviare la nostra candidatura premendo sul pulsante APPLY.
-        Gli annunci a cui abbiamo mandato una candidatura non mostreranno il pulsante APPLY 
-        e si distingueranno dalle altre per colore e Badge ‘applied’.
-        Un annuncio a cui abbiamo inviato la candidatura automaticamente viene eliminato dalla lista starred.
-        Anche in questo caso inseriremo l’id nell’array applied. (come prima abbiamo fatto per lo starred)
-
-
-        Nota bene: La lista starred conterrà solo l’id dell’elemento, 
-        tramite il quale potremmo identificare quali annunci sono preferiti e quali no.
-     -->
-
+    
     <!-- collegamento con vue.js -->
     <div id="app">
         <div class="container mt-5">
@@ -36,7 +24,7 @@
                 <div class="row">
                     <ul class="col-6 cont-text">
                         <li>
-                            <h3>{{job.company}}</h3>
+                            <h2>{{job.company}}</h2>
                             <div v-if="starred.includes(job.id)" @click="notLike(starred, job.id)">
                                 <i class="fas fa-heart"></i>
                             </div>
@@ -47,20 +35,35 @@
                             <!-- <i class="fas fa-heart"></i> -->
                         </li>
                         <li>
-                            <H4>{{job.position}}</H4>
-                            <span>{{job.contract}}</span>
+                            <h5>{{job.position}}</h5>
+                            <span>({{job.contract}})</span>
                         </li>
                         <li>
                             <span>{{job.description}}</span>
                         </li>
                         <li>
-                            <span>{{job.city}},</span>
+                            <span class="mx-2">{{job.city}},</span>
                             <span>{{job.created_at}}</span>
                         </li>
-                        <li>
-                            <button type="button" class="btn btn-outline-success">APPLY</button>
+                        <li class="buttonApply">
+                            <div  v-if="applied.includes(job.id)">
+                                <button type="button" 
+                                class="btn btn-outline-danger" 
+                                @click="applyedNone(applied, job.id)">Candidato</button>                            
+                            </div>
+                            <div  v-else="">
+                                <button type="button" 
+                                class="btn btn-outline-success" 
+                                @click="applyed(applied, job.id)">Candidati</button>                       
+                            </div>
                         </li>
-                    </ul>  
+                    </ul> 
+                    <div class="newsletter-modal col-4">
+                        <div class="close">
+                            <i class="far fa-window-close"></i>
+                        </div>
+                        <h1>Candidatura Inviata</h1>
+                    </div> 
                 </div>
             </div>
         </div>

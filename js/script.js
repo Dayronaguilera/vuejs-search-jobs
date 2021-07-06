@@ -17,17 +17,17 @@ new Vue(
                 },
                 {
                     id: 2,
-                    company: 'volocom technology',
+                    company: 'Volocom Technology',
                     position: 'Front End Developer',
                     description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                     created_at: '5/24/2021',
                     logo: 'logo.jpg',
-                    city: 'Roma',
+                    city: 'Napoli',
                     contract: 'Part Time'
                 },  
                 {
                     id: 3,
-                    company: 'Umana spa',
+                    company: 'Umana S.P.A',
                     position: 'Junior developer',
                     description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                     created_at: '5/26/2021',
@@ -42,21 +42,40 @@ new Vue(
                     description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                     created_at: '5/30/2021',
                     logo: 'logo.jpg',
-                    city: 'Roma',
+                    city: 'Frosinone',
                     contract: 'Stage'
                 },  
     
             ],
-            starred: [],
-            applied: [4, 5]    
+            starred: [],//array che si popola selezionando il cuore e si svuota deselezionando! 
+            applied: [],//array che si popola quando mi candido e si svuota quando deseleziono!  
         },
         methods:{
-            like: function (starred, id) {
+            like: function (starred, id) { //al like esegue questo
                 starred.push(id);
             },
-            notLike: function (starred, id) {
+            notLike: function (starred, id) { //quando deseleziono esegue quest'altro!
                 let index = starred.indexOf(id)
                 starred.splice(index, 1)
+            },
+            applyed: function (applied, id) {
+                applied.push(id);
+
+                setTimeout(() => { //dopo 1s dalla candidatura si esegue il setTimeout!
+
+                    let modal = document.querySelector('.newsletter-modal');
+                    let closeButton = document.querySelector('.newsletter-modal .close');
+                    modal.style.display = 'block';
+                    closeButton.addEventListener('click', function () {
+                        modal.style.display = 'none';
+                    })
+            
+                }, 1000);
+
+            },
+            applyedNone: function (applied, id) {
+                let index = applied.indexOf(id)
+                applied.splice(index, 1)
             },
         }
     }
