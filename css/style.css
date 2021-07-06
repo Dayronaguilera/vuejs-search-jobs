@@ -1,8 +1,31 @@
+
 .cont-text{
     border: 1px black solid;
-    border-radius: 5px;
-    
+    border-radius: 10px;
+    position: relative;
+    padding: 10px 0;
 }
 .cont-text li{
     list-style: none;
+    padding: 5px 10px
+}
+.cont-text li i{
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    font-size: 25px;
+}
+
+.cont-text li:nth-child(2) h4{
+    text-decoration: underline;
+    display: inline;
+    margin-right: 5px;
+}
+.cont-text li:nth-child(2) span{
+    font-weight: bold;
+}
+.cont-text li:last-child{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
 }

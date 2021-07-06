@@ -33,7 +33,7 @@ new Vue(
                     created_at: '5/26/2021',
                     logo: 'logo.jpg',
                     city: 'Roma',
-                    contract: 'Full Time'
+                    contract: 'Partita IVA'
                 },  
                 {
                     id: 4,
@@ -47,8 +47,17 @@ new Vue(
                 },  
     
             ],
-            starred: [1, 2, 3],
+            starred: [1, 2],
             applied: [4, 5]    
+        },
+        methods:{
+            like: function (array, id) {
+                array.push(id)
+            },
+            notLike: function (array, id) {
+                let index = array.indexOf(id)
+                array.splice(index, 1)
+            },
         }
     }
  );

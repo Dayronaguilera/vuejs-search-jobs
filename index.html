@@ -17,8 +17,7 @@
 </head>
 <body>
     <!-- 
-        Milestone 1
-        Mostriamo tutti gli annunci in una lista, con una grafica molto elementare.
+        
 
         Milestone 2
         Identificare il preferito
@@ -36,27 +35,31 @@
 
     <!-- collegamento con vue.js -->
     <div id="app">
-        <div class="container">
-            <div v-for = 'job in jobs'>
+        <div class="container mt-5">
+            <div v-for = '(job, index) in jobs' class="">
                 <div class="row">
                     <ul class="col-6 cont-text">
                         <li>
-                            {{job.company}}
+                            <h3>{{job.company}}</h3>
+                            <div v-if="starred.includes(job.id)" @click="notLike(starred, job.id)">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div v-else="starred.includes(job.id)" @click="like(starred, job.id)">
+                                <i class="far fa-heart"></i>
+                            </div>
+
+                            <!-- <i class="fas fa-heart"></i> -->
                         </li>
                         <li>
-                            {{job.position}}
+                            <H4>{{job.position}}</H4>
+                            <span>{{job.contract}}</span>
                         </li>
                         <li>
-                            {{job.description}}
+                            <span>{{job.description}}</span>
                         </li>
                         <li>
-                            {{job.created_at}}
-                        </li>
-                        <li>
-                            {{job.city}}
-                        </li>
-                        <li>
-                            {{job.contract}}
+                            <span>{{job.city}},</span>
+                            <span>{{job.created_at}}</span>
                         </li>
                     </ul>  
                 </div>
