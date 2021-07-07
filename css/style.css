@@ -45,7 +45,7 @@
 
 /* modale */
 .newsletter-modal {
-    display: none;
+    display: block;
     position: fixed;
     top: 200px;
     border: 2px #333 solid;
@@ -55,12 +55,4 @@
     color: rgb(39, 54, 187);
     z-index: 1001;
     margin-left: 15px;
-}
-
-.newsletter-modal .close {
-    position: absolute;
-    right: 45px;
-    top: 40px;
-    cursor: pointer;
-    font-size: 25px;
 }

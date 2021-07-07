@@ -49,6 +49,7 @@ new Vue(
             ],
             starred: [],//array che si popola selezionando il cuore e si svuota deselezionando! 
             applied: [],//array che si popola quando mi candido e si svuota quando deseleziono!  
+            modalOpen: false,
         },
         methods:{
             like: function (starred, id) { //al like esegue questo
@@ -60,23 +61,19 @@ new Vue(
             },
             applyed: function (applied, id) {
                 applied.push(id);
+                this.modalOpen = true;
 
                 setTimeout(() => { //dopo 1s dalla candidatura si esegue il setTimeout!
-
-                    let modal = document.querySelector('.newsletter-modal');
-                    let closeButton = document.querySelector('.newsletter-modal .close');
-                    modal.style.display = 'block';
-                    closeButton.addEventListener('click', function () {
-                        modal.style.display = 'none';
-                    })
-            
-                }, 1000);
+                    this.modalOpen = false;
+                }, 2000);
 
             },
             applyedNone: function (applied, id) {
                 let index = applied.indexOf(id)
                 applied.splice(index, 1)
             },
+            
+            
         }
     }
  );
