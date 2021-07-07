@@ -1,16 +1,22 @@
 
+.cont-title h1{
+    color: rgb(223, 96, 96);
+    border: 1px rgb(230, 17, 17) solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
 .cont-text{
-    border: 1px rgb(212, 19, 19) solid;
+    border: 1px rgb(230, 17, 17) solid;
     border-radius: 10px;
     position: relative;
     padding: 10px 0;
-    background-color: rgba(160, 173, 158, 0.1);
+    background-color: rgba(214, 218, 214, 0.15);
+    z-index: 1000;    
 }
 .cont-text li{
     list-style: none;
-    padding: 5px 10px;
-   
-    
+    padding: 5px 10px;   
 }
 .cont-text li i{
     position: absolute;
@@ -25,7 +31,7 @@
     text-decoration: underline;
     display: inline;
     margin-right: 5px;
-    color: rgb(159, 246, 45);
+    color: rgb(55, 245, 229);
 }
 .cont-text li:nth-child(2) span{
     font-weight: bold;

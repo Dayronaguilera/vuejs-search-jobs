@@ -47,8 +47,8 @@ new Vue(
                 },  
     
             ],
-            starred: [],//array che si popola selezionando il cuore e si svuota deselezionando! 
-            applied: [],//array che si popola quando mi candido e si svuota quando deseleziono!  
+            starred: [1,4],//array che si popola selezionando il cuore e si svuota deselezionando! 
+            applied: [2,3],//array che si popola quando mi candido e si svuota quando deseleziono!  
             modalOpen: false,
         },
         methods:{

@@ -22,8 +22,11 @@
         <div class="container mt-5">
             <div class="row ">
                 <div class="col-4">
+                    <div class="cont-title">
+                        <h1>List For Job</h1>
+                    </div>
                     <div  v-for = '(job, index) in jobs' >
-                        <ul class=" cont-text">
+                        <ul class="cont-text">
                             <li>
                                 <h2>{{job.company}}</h2>
                                 <div v-if="starred.includes(job.id)" @click="notLike(starred, job.id)">
@@ -60,6 +63,9 @@
                     </div>
                 </div>
                 <div class="col-4">
+                    <div class="cont-title">
+                        <h1>List For Favorites</h1>
+                    </div>
                     <div v-for = 'job in jobs'>
                         <div v-if="starred.includes(job.id)">
                             <ul class="cont-text">
@@ -82,6 +88,9 @@
                     </div>
                 </div>
                 <div class="col-4">
+                    <div class="cont-title">
+                        <h1>List For Nominations</h1>
+                    </div>
                     <div v-for = 'job in jobs'>
                         <div v-if="applied.includes(job.id)">
                             <ul class="cont-text">
